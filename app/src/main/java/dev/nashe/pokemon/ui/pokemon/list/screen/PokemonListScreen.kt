@@ -27,6 +27,7 @@ import dev.nashe.pokemon.ui.theme.Dimen16Dp
 import dev.nashe.pokemon.ui.theme.Dimen8Dp
 import dev.nashe.pokemon.ui.theme.Gray30
 import dev.nashe.pokemon.ui.theme.White
+import dev.nashe.pokemon.ui.theme.helveticaFontFamily
 import java.util.Locale
 
 @Composable
@@ -107,9 +108,10 @@ fun PokemonItem(
                 .padding(Dimen16Dp),
             text = pokemonModel.name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() },
             maxLines = 1,
-            style = MaterialTheme.typography.titleMedium.copy(
-                fontWeight = FontWeight.Bold
+            style = MaterialTheme.typography.bodyLarge.copy(
+                fontWeight = FontWeight.Normal
             ),
+            fontFamily = helveticaFontFamily,
             color = Color.Black
         )
         HorizontalDivider(color = Gray30)
